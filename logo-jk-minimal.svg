@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 164" role="img" aria-labelledby="title">
   <title id="title">JK — Joab Kiefer</title>
   <g fill="#f4f4f1">
-    <path d="M18 14h92v78c0 30-19 48-49 48-29 0-47-18-47-46h26c0 14 8 22 22 22 14 0 22-9 22-24V39H18V14Z"/>
-    <path d="M112 14h27v48l42-48h34l-55 60 58 66h-36l-43-52v52h-27V14Z"/>
+    <path d="M16 16h151v78c0 35-24 55-64 55H78c-39 0-64-22-64-58h37c0 18 11 27 30 27h20c20 0 29-9 29-27V50H16V16Z"/>
+    <path d="M130 16h37v48l66-48h54l-88 64 91 69h-56l-67-52v52h-37V16Z"/>
   </g>
 </svg>
