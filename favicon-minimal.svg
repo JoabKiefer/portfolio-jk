@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title">
+  <title id="title">JK</title>
+  <rect width="220" height="220" rx="34" fill="#050505"/>
+  <g fill="#f4f4f1" transform="translate(12 38) scale(.9)">
+    <path d="M18 14h92v78c0 30-19 48-49 48-29 0-47-18-47-46h26c0 14 8 22 22 22 14 0 22-9 22-24V39H18V14Z"/>
+    <path d="M112 14h27v48l42-48h34l-55 60 58 66h-36l-43-52v52h-27V14Z"/>
+  </g>
+</svg>

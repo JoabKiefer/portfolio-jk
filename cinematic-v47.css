@@ -156,7 +156,7 @@ header{
 .skill-num{font-size:12px;letter-spacing:.15em;color:#83837f}
 .skill-title{font-size:clamp(31px,3vw,47px);margin:160px 0 18px;letter-spacing:-.055em}
 .skill p{color:#777773;line-height:1.8}
-.skill-video-bg video{filter:grayscale(1) contrast(1.15)}
+.skill-video-bg video{filter:none}
 .skill-video:after{background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.9))}
 
 .funda-showcase{margin-top:8px}
