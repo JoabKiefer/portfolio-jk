@@ -25,7 +25,7 @@ header{
   backdrop-filter:blur(14px);
 }
 .nav{height:92px}
-.logo{display:block;width:76px;height:auto;filter:grayscale(1) brightness(3);opacity:.96}
+.logo{display:block;width:88px;height:auto;filter:none;opacity:1;border-radius:2px}
 .navlinks{gap:38px;font-size:8px;letter-spacing:.2em}
 .navlinks a{color:#8b8b87}
 .navlinks a:hover{color:#f4f4ef}
@@ -220,7 +220,7 @@ header{
 
 footer{padding:36px 0;border-color:#252523}
 .footer{color:#656561;letter-spacing:.16em}
-.footer-logo{width:72px;height:auto;filter:grayscale(1) brightness(2)}
+.footer-logo{width:88px;height:auto;filter:none;border-radius:2px}
 
 .reveal{transform:translateY(38px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,1,.36,1)}
 
@@ -244,7 +244,7 @@ footer{padding:36px 0;border-color:#252523}
   .container{width:calc(100% - 28px)}
   header{background:linear-gradient(180deg,rgba(3,3,3,.96),rgba(3,3,3,.45) 72%,transparent)}
   .nav{height:68px}
-  .logo{width:62px;height:auto}
+  .logo{width:74px;height:auto}
   .hero{min-height:max(720px,100svh);padding:94px 0 78px}
   .hero:before{width:860px;height:560px;left:-500px;top:-250px;border-width:90px;filter:blur(24px)}
   .hero:after{background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5))}
