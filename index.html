@@ -454,7 +454,7 @@ footer{border-top:1px solid var(--line);padding:28px 0}
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
 </style>
-<link rel="stylesheet" href="cinematic-v47.css?v=cores-2">
+<link rel="stylesheet" href="cinematic-v47.css?v=hierarquia-1">
 </head>
 <body>
 
@@ -531,7 +531,9 @@ footer{border-top:1px solid var(--line);padding:28px 0}
 <section class="hero" id="inicio">
 <div class="container hero-inner reveal">
 <div class="kicker">JOAB KIEFER — EDITOR DE VÍDEO & MOTION DESIGNER</div>
-<h1>MAKE<br>IT MOVE<span class="lime">.</span></h1>
+<h1 id="heroHeadline" aria-label="Make it move">
+  <span id="heroLineOne">MAKE</span><br><span id="heroLineTwo">IT MOVE</span><span class="lime">.</span>
+</h1>
 <p class="hero-copy">DIREÇÃO VISUAL / EDIÇÃO / MOTION</p>
 <div class="actions"><a class="btn" href="#estudos">Ver meu trabalho ↗</a><a class="btn outline" href="#contato">Falar comigo</a></div>
 </div>
@@ -727,7 +729,7 @@ footer{border-top:1px solid var(--line);padding:28px 0}
 <section class="contact" id="contato">
 <div class="container reveal">
 <div class="eyebrow">05 / Contato</div>
-<h2 class="contact-title">Tem um projeto<br><span class="lime">em mente?</span></h2>
+<h2 class="contact-title"><span class="contact-line">Tem um projeto</span><span class="contact-line lime">em mente?</span></h2>
 <div class="contact-row">
 <p>Se você precisa de edição, motion ou um criativo que saia do comum, vamos conversar sobre o projeto.</p>
 <a class="btn" href="https://wa.me/5527997404061" target="_blank" rel="noopener">Falar comigo ↗</a>
@@ -825,6 +827,33 @@ document.querySelectorAll('.skill-video').forEach(card => {
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden) videos.forEach(video=>video.pause());
   });
+})();
+</script>
+<script id="hero-language-loop">
+(function(){
+  const headline=document.getElementById('heroHeadline');
+  const lineOne=document.getElementById('heroLineOne');
+  const lineTwo=document.getElementById('heroLineTwo');
+  if(!headline || !lineOne || !lineTwo) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const versions=[
+    {one:'MAKE',two:'IT MOVE',label:'Make it move'},
+    {one:'FAÇA',two:'SE MOVER',label:'Faça se mover'}
+  ];
+  let current=0;
+
+  setInterval(()=>{
+    headline.classList.add('is-switching');
+    setTimeout(()=>{
+      current=(current+1)%versions.length;
+      const next=versions[current];
+      lineOne.textContent=next.one;
+      lineTwo.textContent=next.two;
+      headline.setAttribute('aria-label',next.label);
+      headline.classList.remove('is-switching');
+    },260);
+  },3200);
 })();
 </script>
 </body>

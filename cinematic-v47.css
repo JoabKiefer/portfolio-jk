@@ -103,7 +103,9 @@ header{
   color:rgba(235,235,231,.9);
   text-wrap:balance;
   text-shadow:0 0 45px rgba(255,255,255,.05);
+  transition:opacity .26s ease,transform .26s ease,filter .26s ease;
 }
+.hero h1.is-switching{opacity:0;transform:translateY(10px);filter:blur(6px)}
 .lime{color:#f1f1ed;font-family:inherit}
 .hero-copy{
   margin:28px 0 30px;
@@ -215,9 +217,21 @@ header{
   filter:blur(30px);
   transform:rotate(-18deg);
 }
-.contact-title{font-size:clamp(72px,10vw,148px)}
-.contact-row{margin-top:60px;padding-top:28px;border-top:1px solid #2a2a28}
-.contact-row p{color:#858581;line-height:1.85}
+.contact .eyebrow{margin-bottom:24px}
+.contact-title{font-size:clamp(64px,7.6vw,112px);line-height:.84;max-width:1060px}
+.contact-line{display:block;white-space:nowrap}
+.contact-row{
+  display:grid;
+  grid-template-columns:minmax(260px,420px) auto;
+  align-items:start;
+  justify-content:space-between;
+  gap:48px;
+  margin-top:54px;
+  padding-top:32px;
+  border-top:1px solid #2a2a28;
+}
+.contact-row p{max-width:420px;color:#a1a19c;font-size:12px;line-height:1.85}
+.contact-row .btn{min-width:176px;min-height:48px}
 
 footer{padding:36px 0;border-color:#252523}
 .footer{color:#656561;letter-spacing:.16em}
@@ -239,6 +253,8 @@ footer{padding:36px 0;border-color:#252523}
   .about-visual{min-height:560px}
   .about-copy{padding:55px 25px 20px}
   .contact{min-height:auto;padding:120px 0}
+  .contact-title{font-size:clamp(60px,10vw,88px)}
+  .contact-row{grid-template-columns:minmax(0,1fr) auto;gap:32px}
 }
 
 @media(max-width:600px){
@@ -270,8 +286,11 @@ footer{padding:36px 0;border-color:#252523}
   .about-title{font-size:clamp(54px,16vw,74px)}
   .contact{padding:100px 0}
   .contact:before{width:620px;height:420px;right:-360px;top:-145px;border-width:72px;filter:blur(24px)}
-  .contact-title{font-size:clamp(54px,15vw,76px)}
-  .contact-row{margin-top:42px}
+  .contact-title{font-size:clamp(48px,14vw,68px);line-height:.88}
+  .contact-line{white-space:normal}
+  .contact-row{grid-template-columns:1fr;gap:22px;margin-top:38px;padding-top:24px}
+  .contact-row p{font-size:11px;max-width:310px}
+  .contact-row .btn{width:100%;margin-top:0}
 }
 
 @media(prefers-reduced-motion:reduce){
