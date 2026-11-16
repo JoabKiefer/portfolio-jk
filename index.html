@@ -456,7 +456,7 @@ footer{border-top:1px solid var(--line);padding:28px 0}
 </style>
 <link rel="stylesheet" href="cinematic-v47.css?v=hero-hierarchy-2">
 </head>
-<body>
+<body class="site-entering">
 
 <!-- Loading inicial -->
 <div id="siteLoading" class="site-loading" aria-label="Carregando portfólio">
@@ -475,12 +475,28 @@ footer{border-top:1px solid var(--line);padding:28px 0}
   overflow:hidden;
   opacity:1;
   visibility:visible;
-  transition:opacity .22s ease, visibility .22s ease;
+  filter:blur(0);
+  transform:scale(1);
+  transition:opacity .55s ease,filter .65s ease,transform .65s cubic-bezier(.22,1,.36,1),visibility .55s ease;
 }
 .site-loading.is-hidden{
   opacity:0;
+  filter:blur(18px);
+  transform:scale(1.035);
   visibility:hidden;
   pointer-events:none;
+}
+.site-enter-layer{
+  opacity:1;
+  filter:blur(0);
+  transform:scale(1);
+  transform-origin:50% 42%;
+  transition:opacity .6s ease,filter .78s cubic-bezier(.22,1,.36,1),transform .78s cubic-bezier(.22,1,.36,1);
+}
+body.site-entering .site-enter-layer{
+  opacity:0;
+  filter:blur(20px);
+  transform:scale(1.018);
 }
 .loading-logo{
   width:180px;
@@ -508,16 +524,20 @@ footer{border-top:1px solid var(--line);padding:28px 0}
     if(finished) return;
     finished = true;
     loading.classList.add('is-hidden');
-    setTimeout(() => loading.remove(), 240);
+    requestAnimationFrame(() => {
+      document.body.classList.remove('site-entering');
+      document.body.classList.add('site-ready');
+    });
+    setTimeout(() => loading.remove(), 680);
   }
 
   setTimeout(finishLoading, 720);
 })();
 </script>
 
-<div class="noise"></div>
+<div class="noise site-enter-layer"></div>
 
-<header>
+<header class="site-enter-layer">
 <div class="container nav">
 <a href="#inicio"><img class="logo" src="logo-jk-minimal.svg?v=oficial-1" alt="JK — Joab Kiefer"></a>
 <nav class="navlinks">
@@ -527,7 +547,7 @@ footer{border-top:1px solid var(--line);padding:28px 0}
 </div>
 </header>
 
-<main>
+<main class="site-enter-layer">
 <section class="hero" id="inicio">
 <div class="container hero-inner reveal">
 <div class="kicker">JOAB KIEFER — EDITOR DE VÍDEO & MOTION DESIGNER</div>
@@ -738,7 +758,7 @@ footer{border-top:1px solid var(--line);padding:28px 0}
 </section>
 </main>
 
-<footer>
+<footer class="site-enter-layer">
 <div class="container footer">
 <img class="footer-logo" src="logo-jk-minimal.svg?v=oficial-1" alt="JK — Joab Kiefer">
 <span>Editor de Vídeo & Motion Designer</span><span>© 2026</span><span>Instagram · Behance · E-mail</span>
