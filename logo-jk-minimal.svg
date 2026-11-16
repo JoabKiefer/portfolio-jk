@@ -1,7 +1,16 @@
-<svg xmlns="file:///C:/Users/jrosa/Downloads/SVG/Ativo%201.svg" viewBox="0 0 1004 405" role="img" aria-labelledby="title">
-  <title id="title">JK — Joab Kiefer</title>
-  <g fill="#f4f4f1">
-    <path d="M127 0h444v242c0 103-68 163-186 163H183C73 405 0 333 0 218h139c0 55 37 81 99 81h63c69 0 107-30 107-88V101H127V0Z"/>
-    <path d="M571 159 797 0h207L718 194l286 211H776L571 239v-80Z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1004 405">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fbfbfb;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <path class="cls-1" d="M127,0h444v242c0,103-68,163-186,163h-202C73,405,0,333,0,218h139c0,55,37,81,99,81h63c69,0,107-30,107-88v-110H127V0Z"/>
+      <path class="cls-1" d="M571,159L797,0h207l-286,194,286,211h-228l-205-166v-80Z"/>
+    </g>
   </g>
 </svg>

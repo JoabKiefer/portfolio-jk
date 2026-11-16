@@ -25,7 +25,7 @@ header{
   backdrop-filter:blur(14px);
 }
 .nav{height:92px}
-.logo{display:block;width:88px;height:auto;filter:none;opacity:1;border-radius:2px}
+.logo{display:block;width:88px;height:auto;filter:none;opacity:1}
 .navlinks{gap:38px;font-size:8px;letter-spacing:.2em}
 .navlinks a{color:#8b8b87}
 .navlinks a:hover{color:#f4f4ef}
@@ -221,7 +221,7 @@ header{
 
 footer{padding:36px 0;border-color:#252523}
 .footer{color:#656561;letter-spacing:.16em}
-.footer-logo{width:88px;height:auto;filter:none;border-radius:2px}
+.footer-logo{width:88px;height:auto;filter:none}
 
 .reveal{transform:translateY(38px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,1,.36,1)}
 
