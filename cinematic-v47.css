@@ -180,7 +180,7 @@ header{
   transform:none;
   object-fit:cover;
   object-position:center center;
-  filter:none;
+  filter:none !important;
   opacity:1;
 }
 .about-copy{padding:80px 40px 80px 90px}
@@ -188,8 +188,9 @@ header{
 .about-copy p{color:#8b8b87;font-size:11px;line-height:1.95}
 .tools{margin-top:60px;border-color:#282826}
 .tools-label{letter-spacing:.24em;font-size:8px}
-.tool{filter:grayscale(1);opacity:.72;border-radius:7px}
-.tool:hover{filter:grayscale(0);opacity:1}
+.tool,.tool img{filter:none !important;opacity:1}
+.tool{border-radius:7px}
+.tool:hover{filter:brightness(1.08) !important;opacity:1}
 
 .contact{
   min-height:88svh;
