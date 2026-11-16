@@ -102,31 +102,37 @@ header{
   align-items:center;
   justify-content:center;
   text-align:center;
+  transform:translateY(-1.5vh);
 }
 .kicker{
-  margin:0 0 32px;
-  color:#a4a49f;
+  margin:0 0 26px;
+  padding:7px 12px;
+  color:#b9b9b4;
   font-size:8px;
-  letter-spacing:.3em;
+  letter-spacing:.26em;
   font-weight:700;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(3,3,3,.36);
+  backdrop-filter:blur(8px);
 }
 .hero h1{
-  width:min(100%,980px);
+  width:min(100%,880px);
   font-family:"Arial Black",Arial,sans-serif;
-  font-size:clamp(72px,9vw,138px);
-  line-height:.75;
-  letter-spacing:-.078em;
+  font-size:clamp(68px,8vw,118px);
+  line-height:.78;
+  letter-spacing:-.074em;
   color:rgba(242,242,238,.94);
   text-wrap:balance;
   text-shadow:0 12px 60px rgba(0,0,0,.34),0 0 45px rgba(255,255,255,.05);
 }
 #heroLineOne,#heroLineTwo{display:inline-block}
-#heroLineOne{transform:translateX(-.16em)}
-#heroLineTwo{transform:translateX(.08em)}
+#heroLineOne{font-size:.86em;transform:translateX(-.12em)}
+#heroLineTwo{transform:translateX(.04em)}
 .lime{color:#f1f1ed;font-family:inherit}
 .hero-copy{
-  margin:32px 0 34px;
-  color:#9a9a95;
+  margin:30px 0 36px;
+  color:#aaa9a4;
   font-size:8px;
   letter-spacing:.28em;
   font-weight:700;
@@ -283,12 +289,12 @@ footer{padding:36px 0;border-color:#252523}
   .hero{min-height:max(720px,100svh);padding:94px 0 78px}
   .hero:before{width:860px;height:560px;left:-500px;top:-250px;border-width:90px;filter:blur(24px)}
   .hero:after{background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5))}
-  .hero-inner{min-height:calc(max(720px,100svh) - 172px)}
-  .kicker{font-size:7px;line-height:1.6;margin-bottom:26px;letter-spacing:.22em}
+  .hero-inner{min-height:calc(max(720px,100svh) - 172px);transform:translateY(-1vh)}
+  .kicker{font-size:6.5px;line-height:1.5;margin-bottom:24px;padding:6px 9px;letter-spacing:.18em}
   .hero h1{font-size:clamp(50px,16vw,72px);line-height:.8;letter-spacing:-.07em}
-  #heroLineOne{transform:translateX(-.08em)}
-  #heroLineTwo{transform:translateX(.04em)}
-  .hero-copy{margin:28px 0 30px;font-size:7px;line-height:1.6;letter-spacing:.22em}
+  #heroLineOne{font-size:.9em;transform:translateX(-.05em)}
+  #heroLineTwo{transform:none}
+  .hero-copy{margin:26px 0 30px;font-size:7px;line-height:1.6;letter-spacing:.2em}
   .actions{grid-template-columns:1fr;width:min(100%,330px)}
   .actions .btn{min-height:46px}
   .hero-meta{left:14px}
