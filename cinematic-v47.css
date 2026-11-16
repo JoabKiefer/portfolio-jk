@@ -103,9 +103,7 @@ header{
   color:rgba(235,235,231,.9);
   text-wrap:balance;
   text-shadow:0 0 45px rgba(255,255,255,.05);
-  transition:opacity .36s ease;
 }
-.hero h1.is-switching{opacity:0}
 .lime{color:#f1f1ed;font-family:inherit}
 .hero-copy{
   margin:28px 0 30px;

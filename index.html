@@ -454,7 +454,7 @@ footer{border-top:1px solid var(--line);padding:28px 0}
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
 </style>
-<link rel="stylesheet" href="cinematic-v47.css?v=fade-1">
+<link rel="stylesheet" href="cinematic-v47.css?v=static-frame-1">
 </head>
 <body>
 
@@ -827,33 +827,6 @@ document.querySelectorAll('.skill-video').forEach(card => {
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden) videos.forEach(video=>video.pause());
   });
-})();
-</script>
-<script id="hero-language-loop">
-(function(){
-  const headline=document.getElementById('heroHeadline');
-  const lineOne=document.getElementById('heroLineOne');
-  const lineTwo=document.getElementById('heroLineTwo');
-  if(!headline || !lineOne || !lineTwo) return;
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const versions=[
-    {one:'FRAME',two:'BY FRAME',label:'Frame by frame'},
-    {one:'FRAME',two:'A FRAME',label:'Frame a frame'}
-  ];
-  let current=0;
-
-  setInterval(()=>{
-    headline.classList.add('is-switching');
-    setTimeout(()=>{
-      current=(current+1)%versions.length;
-      const next=versions[current];
-      lineOne.textContent=next.one;
-      lineTwo.textContent=next.two;
-      headline.setAttribute('aria-label',next.label);
-      headline.classList.remove('is-switching');
-    },360);
-  },3200);
 })();
 </script>
 </body>
